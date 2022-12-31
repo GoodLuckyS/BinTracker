@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class HistoryViewModel@Inject constructor(
-    private val getHistoryListUseCase: GetHistoryListUseCase,
+    getHistoryListUseCase: GetHistoryListUseCase,
     private val getCardInfoUseCase: GetCardInfoUseCase,
     private val deleteCardInfoUseCase: DeleteCardInfoUseCase
 ) : ViewModel() {
