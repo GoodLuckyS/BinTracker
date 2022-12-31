@@ -35,7 +35,6 @@ class EnterBinFragment : BaseFragment <FragmentEnterBinBinding>(
 
         initObservers()
 
-
         binding.btGetInfo.setOnClickListener {
         val bin = binding.tvBinInput.text.toString()
             viewModel.getInfo(bin)
@@ -43,7 +42,6 @@ class EnterBinFragment : BaseFragment <FragmentEnterBinBinding>(
         }
 
     }
-
 
     private fun initObservers() = with(viewModel){
 

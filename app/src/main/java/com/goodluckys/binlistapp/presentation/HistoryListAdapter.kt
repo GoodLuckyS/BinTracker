@@ -23,7 +23,7 @@ class HistoryListAdapter :
         holder.bind(item)
     }
 
-    class CardListViewHolder(val binding:CardBinding) : RecyclerView.ViewHolder(binding.root) {
+    class CardListViewHolder(private val binding:CardBinding) : RecyclerView.ViewHolder(binding.root) {
 
         var onClickListener: ((item: CardInfo) -> Unit)? = null
 

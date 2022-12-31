@@ -18,7 +18,6 @@ class HistoryRepositoryImpl@Inject constructor(
             }
         }
 
-
     override suspend fun getCardInfo(itemId: Int): CardInfo {
         val item = cardInfoDao.getCardInfo(itemId)
         return item.toDomain()
@@ -33,6 +32,5 @@ class HistoryRepositoryImpl@Inject constructor(
         val itemDB = item.fromDomain()
         cardInfoDao.deleteCardInfo(itemDB)
     }
-
 
 }

@@ -9,7 +9,7 @@
         android:id="@+id/separator4"
         style="@style/separator"
         android:layout_margin="0dp"
-        android:background="@color/main_color"
+        android:background="?attr/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,8 +35,7 @@
         android:layout_margin="4dp"
         android:layout_marginStart="4dp"
         android:gravity="center"
-        android:text="XXXXXXXX"
-        android:textColor="@color/black"
+        android:textColor="?attr/colorOnSecondary"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvEmoji"
         app:layout_constraintStart_toEndOf="@+id/tvEmoji"
@@ -46,7 +45,7 @@
         android:id="@+id/separator3"
         style="@style/separator"
         android:layout_margin="0dp"
-        android:background="@color/main_color"
+        android:background="?attr/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvBin"
@@ -59,10 +58,9 @@
         app:layout_constraintBottom_toBottomOf="@id/separator3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/separator4"
-        android:text="MasterCard"
         android:layout_margin="4dp"
         android:textSize="18sp"
-        android:textColor="@color/black"/>
+        android:textColor="?attr/colorOnSecondary"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

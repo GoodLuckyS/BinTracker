@@ -19,9 +19,6 @@ class TabsHostFragment : BaseFragment<TabsHostFragmentBinding>(
         val navController = navHost.navController
         NavigationUI.setupWithNavController(binding.bottomNavigationView,navController)
 
-
     }
-
-
 
 }

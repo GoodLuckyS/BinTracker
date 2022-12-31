@@ -63,12 +63,6 @@ class EnterBinViewModel @Inject constructor(
         _uiState.value = uiState
     }
 
-    private fun addCardInfo(item:CardInfo){
-        viewModelScope.launch {
-            addCardInfoUseCase.addCardInfo(item)
-        }
-    }
-
     private fun validate(it: String): Boolean {
         var result = true
         if (it.length < 6) {

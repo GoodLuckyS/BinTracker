@@ -42,7 +42,6 @@ class HistoryFragment : BaseFragment<FragmentHistoryBinding>(
 
     }
 
-
     private fun setRecyclerView() {
         val layoutManager = LinearLayoutManager(context) // context
         historyListAdapter = HistoryListAdapter()
@@ -68,7 +67,6 @@ class HistoryFragment : BaseFragment<FragmentHistoryBinding>(
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val item = historyListAdapter.currentList[viewHolder.adapterPosition]
-                Log.e("tag",item.toString())
                 viewModel.deleteCardInfo(item)
             }
         }

@@ -20,14 +20,10 @@ class CardInfoFragment : BaseFragment<FragmentCardInfoBinding>(
         super.onViewCreated(view, savedInstanceState)
 
         updateViews(args.cardInfo)
-        Log.e("Tag",args.cardInfo.toString())
-
 
         binding.button.setOnClickListener {
             findTopNavController().popBackStack()
         }
-
-
 
     }
 

@@ -21,6 +21,4 @@ interface ViewModelModule {
     @ViewModelKey(HistoryViewModel::class)
     fun provideHistoryViewModel(historyViewModel: HistoryViewModel) : ViewModel
 
-
-
 }
