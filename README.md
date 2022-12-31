@@ -2,7 +2,7 @@
 ____
 ![BeFunky-collage](https://user-images.githubusercontent.com/104917599/210127368-ac89fa21-6bb8-4242-a338-edcbe405116e.jpg)
 ____
-## About
+## О приложении
 
 BinTracker - приложение,которое позволит получить информацию о банке,введя BIN\IIN
 
