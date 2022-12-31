@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/bottomNavigationHostFragment">
+
+    <fragment
+        android:id="@+id/bottomNavigationHostFragment"
+        android:name="com.goodluckys.binlistapp.presentation.screens.tabs.TabsHostFragment"
+        android:label="@string/graph_label_bin_tracker"
+        tools:layout="@layout/tabs_host_fragment">
+        <action
+            android:id="@+id/action_fromTabs_to_CardInfo"
+            app:destination="@id/mainFragment2"
+            app:popUpTo="@id/bottomNavigationHostFragment"
+            app:popUpToInclusive="false" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment2"
+        android:name="com.goodluckys.binlistapp.presentation.screens.CardInfoFragment"
+        android:label="@string/graph_label_information">
+        <argument
+            android:name="cardInfo"
+            app:argType="com.goodluckys.binlistapp.domain.CardInfo" />
+    </fragment>
+</navigation>

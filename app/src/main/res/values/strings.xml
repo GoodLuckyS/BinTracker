@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BinTracker</string>
+
+    <!-- Tabs fragment -->
+    <string name="tabs_menu_bin">Bin</string>
+    <string name="tabs_menu_history">History</string>
+    <!-- Card info Fragment -->
+    <string name="btn_close">закрыть</string>
+    <string name="card_info_bank_information">Bank Information</string>
+    <string name="card_info_bank_information_title">Title:</string>
+    <string name="card_info_bank_information_phone">Phone:</string>
+    <string name="card_info_bank_information_url">URL:</string>
+    <string name="card_info_bank_information_city">City:</string>
+    <string name="card_info_general_information">General Information</string>
+    <string name="card_info_general_information_country">Country:</string>
+    <string name="card_info_general_information_brand">Brand:</string>
+    <string name="card_info_general_information_prepaid">Prepaid:</string>
+    <string name="card_info_general_information_length">Card number length:</string>
+    <string name="card_info_general_information_luhn">Luhn:</string>
+    <!-- Enter bin Fragment -->
+    <string name="enter_bin_enter_bin">Enter Your Bin</string>
+    <string name="enter_bin_getinfo">GetInfo</string>
+    <!-- graph -->
+    <string name="graph_label_information">Information</string>
+    <string name="graph_label_bin_tracker">BinTracker</string>
+</resources>

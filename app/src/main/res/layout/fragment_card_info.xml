@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="12dp">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/main_color"
+        android:elevation="8dp"
+        android:padding="16dp"
+        android:text="@string/btn_close"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.153" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/first" />
+
+        <TextView
+            android:id="@+id/tvBinNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCardType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_margin="8dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCardScheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="8dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvCategoryBank"
+        style="@style/CardInfoCategories"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/card_info_bank_information"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvBankInformation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/first"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bankTitle"
+                style="@style/CardInfoSubCategories"
+                android:layout_marginTop="8dp"
+                android:text="@string/card_info_bank_information_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/tvBankTitle"
+                style="@style/CardInfoItems"
+                app:layout_constraintBottom_toBottomOf="@+id/bankTitle"
+                app:layout_constraintStart_toEndOf="@+id/bankTitle"
+                app:layout_constraintTop_toTopOf="@+id/bankTitle" />
+
+            <TextView
+                android:id="@+id/bankPhone"
+                style="@style/CardInfoSubCategories"
+                android:text="@string/card_info_bank_information_phone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bankTitle"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/tvBankPhone"
+                style="@style/CardInfoItems"
+                android:autoLink="phone"
+                app:layout_constraintBottom_toBottomOf="@+id/bankPhone"
+                app:layout_constraintStart_toEndOf="@+id/bankPhone"
+                app:layout_constraintTop_toTopOf="@+id/bankPhone" />
+
+            <TextView
+                android:id="@+id/bankURL"
+                style="@style/CardInfoSubCategories"
+                android:text="@string/card_info_bank_information_url"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bankPhone" />
+
+            <TextView
+                android:id="@+id/tvBankURL"
+                style="@style/CardInfoItems"
+                android:autoLink="web"
+                app:layout_constraintBottom_toBottomOf="@+id/bankURL"
+                app:layout_constraintStart_toEndOf="@+id/bankURL"
+                app:layout_constraintTop_toTopOf="@+id/bankURL" />
+
+            <TextView
+                android:id="@+id/bankCity"
+                style="@style/CardInfoSubCategories"
+                android:layout_marginBottom="8dp"
+                android:text="@string/card_info_bank_information_city"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bankURL" />
+
+            <TextView
+                android:id="@+id/tvBankCity"
+                style="@style/CardInfoItems"
+                android:autoLink="map"
+                app:layout_constraintBottom_toBottomOf="@+id/bankCity"
+                app:layout_constraintStart_toEndOf="@+id/bankCity"
+                app:layout_constraintTop_toTopOf="@+id/bankCity" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvCategoryGeneral"
+        style="@style/CardInfoCategories"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/card_info_general_information"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvBankInformation" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoryGeneral">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/CardCountry"
+                style="@style/CardInfoSubCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_info_general_information_country"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCardCountry"
+                style="@style/CardInfoItems"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/CardCountry"
+                app:layout_constraintTop_toTopOf="@id/CardCountry" />
+
+            <View
+                android:id="@+id/separator1"
+                style="@style/separator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCardCountry" />
+
+            <TextView
+                android:id="@+id/CardBrand"
+                style="@style/CardInfoSubCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/card_info_general_information_brand"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/separator1" />
+
+            <TextView
+                android:id="@+id/tvCardBrand"
+                style="@style/CardInfoItems"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/CardBrand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/CardBrand"
+                app:layout_constraintTop_toTopOf="@+id/CardBrand"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/CardPrepaid"
+                style="@style/CardInfoSubCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_info_general_information_prepaid"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCardBrand" />
+
+            <TextView
+                android:id="@+id/tvCardPrepaid"
+                style="@style/CardInfoItems"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@+id/CardPrepaid"
+                app:layout_constraintStart_toEndOf="@+id/CardPrepaid"
+                app:layout_constraintTop_toTopOf="@+id/CardPrepaid" />
+
+            <View
+                android:id="@+id/separator2"
+                style="@style/separator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCardPrepaid" />
+
+            <TextView
+                android:id="@+id/CardLength"
+                style="@style/CardInfoSubCategories"
+                android:text="@string/card_info_general_information_length"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/separator2" />
+
+            <TextView
+                android:id="@+id/tvLength"
+                style="@style/CardInfoItems"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/CardLength"
+                app:layout_constraintStart_toEndOf="@+id/CardLength"
+                app:layout_constraintTop_toTopOf="@id/CardLength" />
+
+            <TextView
+                android:id="@+id/CardLuhn"
+                style="@style/CardInfoSubCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/card_info_general_information_luhn"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CardLength" />
+
+            <TextView
+                android:id="@+id/tvLuhn"
+                style="@style/CardInfoItems"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@id/CardLuhn"
+                app:layout_constraintStart_toEndOf="@id/CardLuhn"
+                app:layout_constraintTop_toTopOf="@+id/CardLuhn" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
