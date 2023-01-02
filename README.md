@@ -1,6 +1,10 @@
-# BinTracker App :anger:
+
+<h1 align="center">BinTracker app </a> 
+<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 ____
+
 ![BeFunky-collage](https://user-images.githubusercontent.com/104917599/210127368-ac89fa21-6bb8-4242-a338-edcbe405116e.jpg)
+![BeFunky-collage (2)](https://user-images.githubusercontent.com/104917599/210255190-53f2dcb2-fcb9-43e4-82ca-74354df1b816.jpg)
 ____
 ## О приложении
 
@@ -27,13 +31,3 @@ ____
 * Navigation - Navigation Component,SafeArgs
 
 * Async - Coroutines
-
-
-
-
-
-
-
-
-
-
