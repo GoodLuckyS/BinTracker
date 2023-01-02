@@ -5,7 +5,7 @@
     <string name="tabs_menu_bin">Bin</string>
     <string name="tabs_menu_history">History</string>
     <!-- Card info Fragment -->
-    <string name="btn_close">закрыть</string>
+    <string name="btn_close">close</string>
     <string name="card_info_bank_information">Bank Information</string>
     <string name="card_info_bank_information_title">Title:</string>
     <string name="card_info_bank_information_phone">Phone:</string>
