@@ -3,7 +3,8 @@
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 ____
 
-![BeFunky-collage](https://user-images.githubusercontent.com/104917599/210127368-ac89fa21-6bb8-4242-a338-edcbe405116e.jpg)
+![BeFunky-collage (1)](https://user-images.githubusercontent.com/104917599/210256847-63df4927-6c6a-4701-885a-96479963b5d8.jpg)
+
 ![BeFunky-collage (2)](https://user-images.githubusercontent.com/104917599/210255190-53f2dcb2-fcb9-43e4-82ca-74354df1b816.jpg)
 ____
 ## О приложении
