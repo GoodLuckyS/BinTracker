@@ -2,7 +2,6 @@ package com.goodluckys.binlistapp.DI
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey
-import javax.inject.Qualifier
 import kotlin.reflect.KClass
 
 

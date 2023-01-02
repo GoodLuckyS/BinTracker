@@ -13,9 +13,6 @@ interface CardInfoDao {
     @Query("SELECT * FROM card_info")
     fun getHistoryList(): LiveData<List<CardInfoDbEntity>>
 
-    @Query("SELECT * FROM card_info WHERE id=:id")
-    suspend fun getCardInfo(id: Int): CardInfoDbEntity
-
     @Insert
     suspend fun addCardInfo(cardInfo: CardInfoDbEntity)
 

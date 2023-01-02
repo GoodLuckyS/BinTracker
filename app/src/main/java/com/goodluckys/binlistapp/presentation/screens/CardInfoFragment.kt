@@ -1,7 +1,6 @@
 package com.goodluckys.binlistapp.presentation.screens
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.navigation.fragment.navArgs
 import com.goodluckys.binlistapp.databinding.FragmentCardInfoBinding

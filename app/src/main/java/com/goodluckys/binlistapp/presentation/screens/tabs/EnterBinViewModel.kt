@@ -8,13 +8,14 @@ import com.goodluckys.binlistapp.domain.CardInfo
 import com.goodluckys.binlistapp.domain.ResponseState
 import com.goodluckys.binlistapp.domain.usecases.AddCardInfoUseCase
 import com.goodluckys.binlistapp.domain.usecases.RequestCardInfoUseCase
-import com.goodluckys.binlistapp.presentation.utils.*
+import com.goodluckys.binlistapp.presentation.utils.ERROR_VALIDATE_MESSAGE
+import com.goodluckys.binlistapp.presentation.utils.UiState
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class EnterBinViewModel @Inject constructor(
     private val requestCardInfoUseCase: RequestCardInfoUseCase,
-    private val addCardInfoUseCase: AddCardInfoUseCase
+    private val addCardInfoUseCase: AddCardInfoUseCase,
 ) : ViewModel() {
 
     private val _cardInfo = MutableLiveData<CardInfo>()
@@ -25,15 +26,9 @@ class EnterBinViewModel @Inject constructor(
     val errorInput: LiveData<Boolean>
         get() = _errorInput
 
-    private val _clickEvent = MutableLiveData(EVENT_DONE)
-    val clickEvent: LiveData<Int>
-        get() = _clickEvent
-
     private val _uiState = MutableLiveData<UiState>()
     val uiState: LiveData<UiState>
         get() = _uiState
-
-
 
     fun getInfo(bin: String) {
         if (validate(bin)) {
@@ -54,12 +49,7 @@ class EnterBinViewModel @Inject constructor(
         } else _uiState.value = UiState.Error(ERROR_VALIDATE_MESSAGE)
     }
 
-    fun setClickEvent(event:Int){
-        _clickEvent.value = event
-
-    }
-
-    fun setStateUI(uiState:UiState){
+    fun setStateUI(uiState: UiState) {
         _uiState.value = uiState
     }
 

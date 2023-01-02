@@ -17,9 +17,9 @@ import com.goodluckys.binlistapp.showToast
 import javax.inject.Inject
 
 
-class EnterBinFragment : BaseFragment <FragmentEnterBinBinding>(
+class EnterBinFragment : BaseFragment<FragmentEnterBinBinding>(
     FragmentEnterBinBinding::inflate
-        ) {
+) {
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
     private lateinit var viewModel: EnterBinViewModel
@@ -36,25 +36,24 @@ class EnterBinFragment : BaseFragment <FragmentEnterBinBinding>(
         initObservers()
 
         binding.btGetInfo.setOnClickListener {
-        val bin = binding.tvBinInput.text.toString()
+            val bin = binding.tvBinInput.text.toString()
             viewModel.getInfo(bin)
-            viewModel.setClickEvent(EVENT_READY)
         }
 
     }
 
-    private fun initObservers() = with(viewModel){
+    private fun initObservers() = with(viewModel) {
 
         uiState.observe(viewLifecycleOwner) {
-            when(it){
+            when (it) {
                 is UiState.Complete -> {
                     dismissProgress()
                 }
 
                 is UiState.Loading -> {
-                   showProgress()
+                    showProgress()
                 }
-                is UiState.Success  -> {
+                is UiState.Success -> {
                     navigateWithDirection(it.item)
                     dismissProgress()
                     showToast(SUCCESS_MESSAGE)
@@ -62,21 +61,22 @@ class EnterBinFragment : BaseFragment <FragmentEnterBinBinding>(
                 is UiState.Error -> {
                     dismissProgress()
                     showToast(it.error)
+                    this.setStateUI(UiState.Complete)
                 }
             }
         }
 
-        errorInput.observe(viewLifecycleOwner){
+        errorInput.observe(viewLifecycleOwner) {
             binding.tvBinInput.error = ERROR_INPUT
         }
 
     }
 
-    private fun navigateWithDirection(cardInfo:CardInfo) {
+    private fun navigateWithDirection(cardInfo: CardInfo) {
 
-                val direction = TabsHostFragmentDirections
-                    .actionFromTabsToCardInfo(cardInfo)
-                findTopNavController().navigate(direction)
+        val direction = TabsHostFragmentDirections
+            .actionFromTabsToCardInfo(cardInfo)
+        findTopNavController().navigate(direction)
 
         viewModel.setStateUI(UiState.Complete)
     }
@@ -87,7 +87,7 @@ class EnterBinFragment : BaseFragment <FragmentEnterBinBinding>(
         progressBar.visibility = View.GONE
     }
 
-    private fun showProgress() = with(binding){
+    private fun showProgress() = with(binding) {
         binInputBox.visibility = View.GONE
         btGetInfo.isClickable = false
         progressBar.visibility = View.VISIBLE

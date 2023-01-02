@@ -11,8 +11,8 @@ import com.goodluckys.binlistapp.domain.entity.CardNumber
 import com.goodluckys.binlistapp.mapToString
 
 
-fun CardInfoDTO?.toDomain(bin:String): CardInfo = CardInfo(
-    id = UNDEF_ID ,
+fun CardInfoDTO?.toDomain(bin: String): CardInfo = CardInfo(
+    id = UNDEF_ID,
     bin = bin,
     number = this?.number.toDomain(),
     scheme = this?.scheme.mapToString(),
@@ -32,11 +32,11 @@ fun CardBankDTO?.toDomain(): CardBank = CardBank(
 
 fun CardCountryDTO?.toDomain(): String {
     return (this?.emoji ?: "") +
-    this?.name.mapToString() + "," +
-    this?.alpha2.mapToString() + "\n" +
-    "lat:" + this?.latitude.mapToString() + " " +
-    "lon:" + this?.longitude.mapToString()  + "," +
-    "Numeric:" + this?.numeric.mapToString()
+            this?.name.mapToString() + "," +
+            this?.alpha2.mapToString() + "\n" +
+            "lat:" + this?.latitude.mapToString() + " " +
+            "lon:" + this?.longitude.mapToString() + "," +
+            "Numeric:" + this?.numeric.mapToString()
 }
 
 

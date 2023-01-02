@@ -8,13 +8,13 @@ import com.goodluckys.binlistapp.databinding.CardBinding
 import com.goodluckys.binlistapp.domain.CardInfo
 
 class HistoryListAdapter :
-    ListAdapter<CardInfo,HistoryListAdapter.CardListViewHolder>(CardInfoDiffCallback()) {
+    ListAdapter<CardInfo, HistoryListAdapter.CardListViewHolder>(CardInfoDiffCallback()) {
 
     var onClickListener: ((item: CardInfo) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardListViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return CardListViewHolder(CardBinding.inflate(inflater,parent,false))
+        return CardListViewHolder(CardBinding.inflate(inflater, parent, false))
     }
 
     override fun onBindViewHolder(holder: CardListViewHolder, position: Int) {
@@ -23,7 +23,8 @@ class HistoryListAdapter :
         holder.bind(item)
     }
 
-    class CardListViewHolder(private val binding:CardBinding) : RecyclerView.ViewHolder(binding.root) {
+    class CardListViewHolder(private val binding: CardBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         var onClickListener: ((item: CardInfo) -> Unit)? = null
 

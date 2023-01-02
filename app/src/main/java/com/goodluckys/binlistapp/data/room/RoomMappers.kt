@@ -1,6 +1,5 @@
 package com.goodluckys.binlistapp.data.room
 
-import com.goodluckys.binlistapp.data.UNDEF_ID
 import com.goodluckys.binlistapp.data.room.entity.CardBankTuple
 import com.goodluckys.binlistapp.data.room.entity.CardInfoDbEntity
 import com.goodluckys.binlistapp.data.room.entity.CardNumberTuple

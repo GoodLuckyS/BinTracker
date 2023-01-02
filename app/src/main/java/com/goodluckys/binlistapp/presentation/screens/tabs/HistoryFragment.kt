@@ -2,7 +2,6 @@ package com.goodluckys.binlistapp.presentation.screens.tabs
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -14,7 +13,6 @@ import com.goodluckys.binlistapp.findTopNavController
 import com.goodluckys.binlistapp.presentation.BaseFragment
 import com.goodluckys.binlistapp.presentation.HistoryListAdapter
 import com.goodluckys.binlistapp.presentation.ViewModelFactory
-import com.goodluckys.binlistapp.presentation.utils.UiState
 import javax.inject.Inject
 
 class HistoryFragment : BaseFragment<FragmentHistoryBinding>(

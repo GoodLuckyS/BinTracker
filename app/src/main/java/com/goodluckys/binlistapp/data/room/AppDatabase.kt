@@ -14,7 +14,7 @@ import com.goodluckys.binlistapp.data.room.entity.CardInfoDbEntity
 )
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun cardInfoDao():CardInfoDao
+    abstract fun cardInfoDao(): CardInfoDao
 
     companion object {
 
